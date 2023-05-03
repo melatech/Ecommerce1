@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h4TextSize">35dp</dimen>
+    <dimen name="h3TextSize">22dp</dimen>
+    <dimen name="h2TextSize">17dp</dimen>
+
+    <dimen name="_5sdp">5dp</dimen>
+    <dimen name="_50sdp">50dp</dimen>
+
+</resources>
