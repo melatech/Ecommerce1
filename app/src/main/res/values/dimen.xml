@@ -5,12 +5,22 @@
     <dimen name="h2TextSize">17sp</dimen>
 
     <dimen name="_5sdp">5dp</dimen>
+    <dimen name="_6sdp">6dp</dimen>
+    <dimen name="_10sdp">10dp</dimen>
     <dimen name="_15sdp">15dp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_45sdp">45dp</dimen>
     <dimen name="_50sdp">50dp</dimen>
+    <dimen name="_52sdp">52dp</dimen>
+    <dimen name="_100sdp">100dp</dimen>
+    <dimen name="_120sdp">120dp</dimen>
 
     <dimen name="tvRightAddressMargin">115dp</dimen>
     <dimen name="smallButtonWidth">130dp</dimen>
     <dimen name="smallButtonHeight">55dp</dimen>
+
+    <dimen name="mediumButtonWidth">200dp</dimen>
+    <dimen name="mediumButtonHeight">55dp</dimen>
 
     <dimen name="button_corners">5dp</dimen>
 

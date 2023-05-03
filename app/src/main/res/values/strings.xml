@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Ecommerce1</string>
+    <string name="kleine">Kleine.</string>
     <string name="start_btn">Start</string>
+    <string name="content_texture_right">right texture image</string>
+    <string name="register_btn">Register</string>
+    <string name="login_btn">Login</string>
     <string name="rightAddress">The Right Address\nFor Shopping\nAny Day</string>
     <string name="quality">It is now very easy to reach the\n best quality among the\nproducts on the internet!</string>
 </resources>

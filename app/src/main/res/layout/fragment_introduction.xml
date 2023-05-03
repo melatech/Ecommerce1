@@ -61,6 +61,7 @@
         android:src="@drawable/ic_texture_right"
         app:layout_constraintTop_toBottomOf="@id/guidelineLeftTexture"
         app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/content_texture_right"
         />
 
     <androidx.appcompat.widget.AppCompatButton
