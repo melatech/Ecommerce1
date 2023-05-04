@@ -16,6 +16,7 @@ buildscript {
         ext.loading_button_version = '2.2.0'
         ext.viewpager_version = '1.0.0-alpha.1'
         ext.stepview_version = '1.5.1'
+        ext.firebaseAuth_version = '22.0.0'
     }
     dependencies {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
