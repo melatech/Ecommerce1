@@ -69,7 +69,7 @@
             />
 
         <EditText
-            android:id="@+id/edPasswordLogin"
+            android:id="@+id/edPasswordRegister"
             android:layout_width="@dimen/_0sdp"
             android:layout_height="@dimen/editTextHeight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/edPasswordLogin"
+            app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
             android:text="@string/forgotPassword"
             android:textColor="@color/black"
             android:textAlignment="center"
