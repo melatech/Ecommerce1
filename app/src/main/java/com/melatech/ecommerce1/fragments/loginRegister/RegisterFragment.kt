@@ -13,11 +13,14 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.melatech.ecommerce1.R
 import com.melatech.ecommerce1.data.User
 import com.melatech.ecommerce1.databinding.FragmentRegisterBinding
+import com.melatech.ecommerce1.util.RegisterValidation
 import com.melatech.ecommerce1.util.Resource
 import com.melatech.ecommerce1.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 const val TAG = "RegisterFragment"
 
@@ -40,18 +43,20 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             buttonRegisterRegister.setOnClickListener {
+                Log.d("jason", "buttonRegisterRegister is clicked")
                 val user = User(
                     edFirstNameRegister.text.toString().trim(),
                     edLastNameRegister.text.toString().trim(),
                     edEmailRegister.text.toString().trim()
                 )
                 val password = edPasswordRegister.text.toString()
+
                 viewModel.createAccountWithEmailAndPassword(user, password)
             }
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+//            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
                     viewModel.register.collect {
                         when (it) {
@@ -73,7 +78,37 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                         }
                     }
                 }
-            }
+ //           }
         }
-    }
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+           // viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                launch {
+                    viewModel.validation.collect { validation ->
+                        if (validation.email is RegisterValidation.Failed){
+                            withContext(Main){
+                                binding.edEmailRegister.apply {
+                                    requestFocus()
+                                    error = validation.email.message
+                                }
+                            }
+                        }
+                        if (validation.password is RegisterValidation.Failed){
+                            withContext(Main){
+                                binding.edPasswordRegister.apply {
+                                    requestFocus()
+                                    error = validation.password.message
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+
+ //   }
 }
