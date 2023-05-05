@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 const val TAG = "RegisterFragment"
 
 @AndroidEntryPoint
-class RegisterFragment : Fragment(R.layout.fragment_login) {
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     private lateinit var binding: FragmentRegisterBinding
     private val viewModel by viewModels<RegisterViewModel>()
@@ -68,6 +68,8 @@ class RegisterFragment : Fragment(R.layout.fragment_login) {
                                 Log.e(TAG, it.message.toString())
                                 binding.buttonRegisterRegister.revertAnimation()
                             }
+
+                            else -> Unit
                         }
                     }
                 }
