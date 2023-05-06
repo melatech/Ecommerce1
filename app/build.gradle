@@ -101,6 +101,7 @@ dependencies {
     testImplementation 'io.mockk:mockk:1.12.0'
 
     //Firebase
+    implementation "com.google.firebase:firebase-firestore-ktx:$firebaseStore_version"
     implementation "com.google.firebase:firebase-auth-ktx:$firebaseAuth_version"
 }
 // Allow references to generated code
