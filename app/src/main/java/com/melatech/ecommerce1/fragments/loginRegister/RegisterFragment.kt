@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import com.melatech.ecommerce1.R
 import com.melatech.ecommerce1.data.User
 import com.melatech.ecommerce1.databinding.FragmentRegisterBinding
@@ -18,7 +16,6 @@ import com.melatech.ecommerce1.util.Resource
 import com.melatech.ecommerce1.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -43,7 +40,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             buttonRegisterRegister.setOnClickListener {
-                Log.d("jason", "buttonRegisterRegister is clicked")
+                Log.d("jason", "buttonRegisterRegister")
                 val user = User(
                     edFirstNameRegister.text.toString().trim(),
                     edLastNameRegister.text.toString().trim(),

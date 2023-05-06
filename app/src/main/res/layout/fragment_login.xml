@@ -30,7 +30,7 @@
             />
 
         <TextView
-            android:id="@+id/tvLetsLogin"
+            android:id="@+id/tvLetsLoginLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/h4"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvLetsLogin"
+            app:layout_constraintTop_toBottomOf="@id/tvLetsLoginLogin"
             android:text="@string/dontHaveAnAccount"
             android:textAlignment="center"
             android:gravity="center"
@@ -69,7 +69,7 @@
             />
 
         <EditText
-            android:id="@+id/edPasswordRegister"
+            android:id="@+id/edPasswordLogin"
             android:layout_width="@dimen/_0sdp"
             android:layout_height="@dimen/editTextHeight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
+            app:layout_constraintTop_toBottomOf="@id/edPasswordLogin"
             android:text="@string/forgotPassword"
             android:textColor="@color/black"
             android:textAlignment="center"
@@ -95,7 +95,7 @@
             android:layout_marginTop="@dimen/_15sdp"
             />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             style="@style/blueButtonStyle"
             android:layout_width="@dimen/_0sdp"
@@ -104,10 +104,13 @@
             android:text="@string/login_btn"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin"
+            app:spinning_bar_color="@color/white"
+
+            />
 
         <ImageView
-            android:id="@+id/facebookLogin"
+            android:id="@+id/facebookLoginLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_13sdp"
@@ -120,14 +123,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login_btn_facebook"
-            app:layout_constraintStart_toStartOf="@id/facebookLogin"
-            app:layout_constraintTop_toTopOf="@id/facebookLogin"
-            app:layout_constraintEnd_toEndOf="@id/facebookLogin"
-            app:layout_constraintBottom_toBottomOf="@id/facebookLogin"
+            app:layout_constraintStart_toStartOf="@id/facebookLoginLogin"
+            app:layout_constraintTop_toTopOf="@id/facebookLoginLogin"
+            app:layout_constraintEnd_toEndOf="@id/facebookLoginLogin"
+            app:layout_constraintBottom_toBottomOf="@id/facebookLoginLogin"
             />
 
         <ImageView
-            android:id="@+id/googleLogin"
+            android:id="@+id/googleLoginLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_13sdp"
@@ -140,10 +143,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login_btn_google"
-            app:layout_constraintStart_toStartOf="@id/googleLogin"
-            app:layout_constraintTop_toTopOf="@id/googleLogin"
-            app:layout_constraintEnd_toEndOf="@id/googleLogin"
-            app:layout_constraintBottom_toBottomOf="@id/googleLogin"
+            app:layout_constraintStart_toStartOf="@id/googleLoginLogin"
+            app:layout_constraintTop_toTopOf="@id/googleLoginLogin"
+            app:layout_constraintEnd_toEndOf="@id/googleLoginLogin"
+            app:layout_constraintBottom_toBottomOf="@id/googleLoginLogin"
             />
 
         <androidx.constraintlayout.widget.Guideline

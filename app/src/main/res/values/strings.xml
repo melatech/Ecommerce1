@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ecommerce1</string>
     <string name="kleine">Kleine.</string>
+    <string name="shopping_page">Shopping Page</string>
     <string name="hintFirstName">First Name</string>
     <string name="hintLastName">Last Name</string>
     <string name="hintPassword">Password</string>
