@@ -13,6 +13,7 @@
     <string name="forgotPassword">Forgot Password</string>
     <string name="content_texture_right">right texture image</string>
     <string name="letsLogIn">Let\'s Login</string>
+    <string name="letsRegister">Let\'s Register</string>
     <string name="dontHaveAnAccount">Don\'t have an account? Register</string>
     <string name="doYouHaveAnAccount">Do you have an account? Log in</string>
     <string name="register_btn">Register</string>

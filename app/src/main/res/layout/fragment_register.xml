@@ -30,14 +30,14 @@
             />
 
         <TextView
-            android:id="@+id/tvLetsLoginRegister"
+            android:id="@+id/tvLetsRegisterRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/h4"
             android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintTop_toBottomOf="@+id/tvAppName"
             app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
-            android:text="@string/letsLogIn"
+            android:text="@string/letsRegister"
             android:textAlignment="center"
             android:gravity="center"
             />
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvLetsLoginRegister"
+            app:layout_constraintTop_toBottomOf="@id/tvLetsRegisterRegister"
             android:text="@string/doYouHaveAnAccount"
             android:textAlignment="center"
             android:gravity="center"
