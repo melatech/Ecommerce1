@@ -79,7 +79,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         }
         lifecycleScope.launchWhenStarted {
-            viewModel.login.collect() {
+            viewModel.login.collect  {
                 when (it) {
                     is Resource.Loading -> {
                         binding.buttonLoginLogin.startAnimation()
