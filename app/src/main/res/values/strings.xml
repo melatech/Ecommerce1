@@ -18,6 +18,10 @@
     <string name="weWillSendYouPasswordLink">We will send you the password reset link to your email</string>
     <string name="cancel">Cancel</string>
     <string name="send">Send</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_profile">Profile</string>
 
     <string name="dontHaveAnAccount">Don\'t have an account? Register</string>
     <string name="doYouHaveAnAccount">Do you have an account? Log in</string>
