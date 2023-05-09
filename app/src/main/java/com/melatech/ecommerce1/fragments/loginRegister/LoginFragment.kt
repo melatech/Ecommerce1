@@ -10,12 +10,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.melatech.ecommerce1.R
 import com.melatech.ecommerce1.activities.ShoppingActivity
 import com.melatech.ecommerce1.databinding.FragmentLoginBinding
+import com.melatech.ecommerce1.dialog.setupBottomSheetDialog
 import com.melatech.ecommerce1.util.Resource
 import com.melatech.ecommerce1.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -46,6 +49,35 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 viewModel.login(email, password)
             }
         }
+
+        binding.tvForgotPasswordLogin.setOnClickListener {
+            setupBottomSheetDialog { email ->
+                viewModel.resetPassword(email)
+            }
+        }
+
+        lifecycleScope.launchWhenStarted {
+            viewModel.resetPassword.collect{
+                when (it) {
+                    is Resource.Loading -> {
+
+                    }
+
+                    is Resource.Success -> {
+                        Snackbar.make(requireView(), "Reset link was sent to your email", Snackbar.LENGTH_LONG).show()
+
+                    }
+
+                    is Resource.Error -> {
+                        Snackbar.make(requireView(), "Error: ${it.message}", Snackbar.LENGTH_LONG).show()
+                    }
+
+                    else -> Unit
+                }
+
+            }
+
+        }
         lifecycleScope.launchWhenStarted {
             viewModel.login.collect() {
                 when (it) {
@@ -65,6 +97,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
                         binding.buttonLoginLogin.revertAnimation()
                     }
+
                     else -> Unit
                 }
             }
