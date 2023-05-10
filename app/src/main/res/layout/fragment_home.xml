@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/homeHeader"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tabRippleColor="@color/green"
+        app:tabRippleColor="@color/white"
         app:tabSelectedTextColor="@color/black"
         app:tabMode="scrollable"
         app:tabTextAppearance="@style/tabLayout_text"
@@ -101,26 +101,13 @@
         android:layout_width="@dimen/_0sdp"
         android:layout_height="@dimen/_0sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         >
 
     </androidx.viewpager2.widget.ViewPager2>
 
-    <TextView
-        android:id="@+id/tvHomeFrag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/h4"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Home Fragment"
-        android:textAlignment="center"
-        android:gravity="center"
-        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
