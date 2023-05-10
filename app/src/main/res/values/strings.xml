@@ -22,6 +22,7 @@
     <string name="menu_search">Search</string>
     <string name="menu_cart">Cart</string>
     <string name="menu_profile">Profile</string>
+    <string name="search_now">Search Now</string>
 
     <string name="dontHaveAnAccount">Don\'t have an account? Register</string>
     <string name="doYouHaveAnAccount">Do you have an account? Log in</string>

@@ -5,6 +5,7 @@
     <dimen name="h2TextSize">17sp</dimen>
     <dimen name="textSize_18sp">18sp</dimen>
     <dimen name="textSize_12sp">12sp</dimen>
+    <dimen name="textSize_15sp">15sp</dimen>
 
 
     <dimen name="_0sdp">0dp</dimen>
@@ -13,9 +14,11 @@
     <dimen name="_6sdp">6dp</dimen>
     <dimen name="_7sdp">7dp</dimen>
     <dimen name="_10sdp">10dp</dimen>
+    <dimen name="_12sdp">12dp</dimen>
     <dimen name="_13sdp">13dp</dimen>
     <dimen name="_15sdp">15dp</dimen>
     <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_24sdp">24dp</dimen>
     <dimen name="_30sdp">30dp</dimen>
     <dimen name="_40sdp">40dp</dimen>
     <dimen name="_45sdp">45dp</dimen>
